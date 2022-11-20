@@ -12,9 +12,9 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors());
 app.use('/',routes);
 
-let port = process.env.PORT;
-if (port == null || port === "") {
-    port = 8000;
+let PORT = process.env.PORT;
+if (PORT == null || PORT === "") {
+    PORT = 8000;
 }
 
 Connection();
