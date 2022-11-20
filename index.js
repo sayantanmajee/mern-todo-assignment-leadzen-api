@@ -6,16 +6,17 @@ import routes from './routes/routes.mjs'
 
 const app = express()
 
+let PORT = process.env.PORT;
+if (PORT == null || PORT === "") {
+    PORT = 8000;
+}
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors());
 app.use('/',routes);
 
-let PORT = process.env.PORT;
-if (PORT == null || PORT === "") {
-    PORT = 8000;
-}
+
 
 Connection();
 
