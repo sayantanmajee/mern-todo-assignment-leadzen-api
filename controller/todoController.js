@@ -1,5 +1,5 @@
 
-import { todoModel } from "../model/todo_model.mjs";
+import { todoModel } from "../model/todo_model.js";
 
 //controller function to add todo
 export const adddTodos = async (req, res) => {
